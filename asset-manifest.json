@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.bf8b17df.css",
-    "main.js": "./static/js/main.3f1949c1.js",
+    "main.js": "./static/js/main.69f4635a.js",
     "static/media/forD.jpg": "./static/media/forD.9a989be8a1d6fc86a06e.jpg",
     "static/media/forT.jpg": "./static/media/forT.38dae43b7e0001498efe.jpg",
     "static/media/Montserrat-SemiBold.ttf": "./static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
@@ -41,10 +41,10 @@
     "static/media/arrow-links-active.svg": "./static/media/arrow-links-active.1fc8b33e6507e233418c.svg",
     "static/media/arrow-links.svg": "./static/media/arrow-links.d635706070fe85b9285e.svg",
     "main.bf8b17df.css.map": "./static/css/main.bf8b17df.css.map",
-    "main.3f1949c1.js.map": "./static/js/main.3f1949c1.js.map"
+    "main.69f4635a.js.map": "./static/js/main.69f4635a.js.map"
   },
   "entrypoints": [
     "static/css/main.bf8b17df.css",
-    "static/js/main.3f1949c1.js"
+    "static/js/main.69f4635a.js"
   ]
 }
