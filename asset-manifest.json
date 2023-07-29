@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kpk-farvater/static/css/main.e5484770.css",
-    "main.js": "/kpk-farvater/static/js/main.2345586d.js",
+    "main.js": "/kpk-farvater/static/js/main.8771ffe9.js",
     "static/media/forD.jpg": "/kpk-farvater/static/media/forD.9a989be8a1d6fc86a06e.jpg",
     "static/media/forT.jpg": "/kpk-farvater/static/media/forT.38dae43b7e0001498efe.jpg",
     "static/media/Montserrat-SemiBold.ttf": "/kpk-farvater/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
@@ -41,10 +41,10 @@
     "static/media/arrow-links-active.svg": "/kpk-farvater/static/media/arrow-links-active.1fc8b33e6507e233418c.svg",
     "static/media/arrow-links.svg": "/kpk-farvater/static/media/arrow-links.d635706070fe85b9285e.svg",
     "main.e5484770.css.map": "/kpk-farvater/static/css/main.e5484770.css.map",
-    "main.2345586d.js.map": "/kpk-farvater/static/js/main.2345586d.js.map"
+    "main.8771ffe9.js.map": "/kpk-farvater/static/js/main.8771ffe9.js.map"
   },
   "entrypoints": [
     "static/css/main.e5484770.css",
-    "static/js/main.2345586d.js"
+    "static/js/main.8771ffe9.js"
   ]
 }
