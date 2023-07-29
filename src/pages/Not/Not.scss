@@ -1,0 +1,23 @@
+.not {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat-Bold";
+  text-align: center;
+  color: $bac-color;
+  background-color: #41426d;
+
+  &__mainbox {
+    padding-top: 150px;
+    padding-bottom: 130px;
+  }
+
+  &__err {
+    font-size: 160px;
+  }
+
+  &__msg {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+}
+

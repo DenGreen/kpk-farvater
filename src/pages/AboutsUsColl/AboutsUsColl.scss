@@ -1,0 +1,15 @@
+.abouts-us-coll {
+    display: flex;
+    column-gap: 30px;
+    padding-top: 90px;
+
+    @media (max-width: 600px) {
+        padding-top: 60px;
+    }
+
+    &__nav {
+        @media (max-width: 1060px) {
+            display: none;
+        }
+    }
+}

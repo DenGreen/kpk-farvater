@@ -1,0 +1,14 @@
+.requisites-page {
+
+    & .conditions__titel {
+        display: none;
+    }
+    & .conditions {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    & .conditions__list {
+        margin-top: 0;
+    }
+}

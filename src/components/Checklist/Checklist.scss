@@ -1,0 +1,46 @@
+.checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+
+    &__title {
+        text-align: center;
+        color: $font-color;
+    }
+
+    &__list {
+        margin-top: 60px;
+        border-radius: 10px;
+        background-color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @media screen and (max-width: 740px) {
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent;
+        }
+    }
+
+    &__item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 0.5px solid $soft-font-color;
+        color: $font-color;
+        line-height: 140%;
+
+        @media screen and (max-width: 740px) {
+            margin-left: 10px;
+            padding-left: 5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            list-style-image: url("../../img/contacts/listImg.png");
+            border-bottom: none;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

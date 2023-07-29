@@ -1,0 +1,47 @@
+.revievs-page {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+    @media (max-width: 1060px) {
+        width: 100%;
+    }
+    
+    & .reviews-main__title {
+        display: none;
+    }
+
+    & .reviews-main__box {
+        margin-top: 0;
+    }
+
+    & .reviews-main {
+        width: 95%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .reviews-main__ya-vk {
+        flex-direction: column;
+    }
+
+    & .revievs-yandex, .revievs-vk {
+        width: 100%;
+    }
+
+    & .revievs-video {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (max-width: 1060px) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    & .reviews-main__link {
+        display: none;
+    }
+
+}

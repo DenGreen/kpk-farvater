@@ -1,0 +1,91 @@
+.geo-position {
+    position: relative;
+
+    &__region {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+
+        @media (max-width: 1060px) {
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 740px) {
+            padding-left: 10px;
+            align-items: flex-start;
+        }
+
+        &-title {
+            font-family: "OpenSans-Bold";
+            font-size: 16px;
+            line-height: 22px;
+            text-align: right;
+            color: $font-color;
+
+            @media screen and (max-width: 740px) {
+                font-size: 14px;
+            }
+        }
+
+        &-btn {
+            font-family: "OpenSans-Regular";
+            font-size: 16px;
+            line-height: 140%;
+            text-decoration: underline;
+            color: $accent-color;
+            text-align: right;
+
+            @media screen and (max-width: 740px) {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 740px) {
+        width:80%;
+        align-items: center;
+    }
+
+    &__box {
+        position: absolute;
+        top: 50px;
+        right: -80px;
+        width: 290px;
+        z-index: 4;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+
+        @media screen and (max-width: 740px) {
+           right: 10%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    &__path {
+        font-family: "Montserrat-SemiBold";
+        font-size: 24px;
+        line-height: 139.4%;
+        color: $accent-color;
+    }
+
+    &__region {
+        font-family: "OpenSans-Bold";
+        font-size: 16px;
+        line-height: 140%;
+        color: $soft-font-color;
+    }
+}

@@ -1,0 +1,28 @@
+.breadcrumbs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+    font-size: 12px;
+    line-height: 140%;
+
+    &__decor {
+        width: 6px;
+        height: 11px;
+        padding-right: 15px;
+        bottom: 0;
+    }
+
+    &__link span{
+        font-family: "OpenSans-Regular";
+        font-size: 14px;
+        line-height: 140%;
+        color: $bac-color;
+
+        @media screen and (max-width: 740px) {
+            font-size: 12px;
+        }
+    }
+}

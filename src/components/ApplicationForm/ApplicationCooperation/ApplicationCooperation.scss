@@ -1,0 +1,87 @@
+.application-cooperation {
+    margin-top: 120px;
+
+    &__title {
+        color: $font-color;
+        text-align: center;
+    }
+
+    &__box {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    &__inner-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        min-width: 290px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.05);
+    }
+
+    &__img {
+        display: block;
+        height: 300px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: contain;
+        background-color: #e6e6ec;
+    }
+
+    &__full-name {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 140%;
+        color: $font-color;
+    }
+
+    &__inner-form {
+        width: 45%;
+        min-width: 300px;
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__phone {
+        position: relative;
+        padding-left: 30px;
+        color: $main-color;
+        font-family: "OpenSans-Bold";
+        font-size: 24px;
+        line-height: 33px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 20px;
+            height: 24px;
+            background-image: url("../../../img/cooperation/phone.png");
+            background-repeat: no-repeat;
+        }
+    }
+
+    & .application-form__form {
+        padding-top: 40px;
+    }
+
+    & .application-form__name,
+    .application-form__tel,
+    .application-form__btn {
+        width: 100%;
+    }
+}

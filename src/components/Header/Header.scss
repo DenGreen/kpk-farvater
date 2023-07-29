@@ -1,0 +1,55 @@
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    &__logo {
+        width: 130px;
+        height: 45px;
+
+        
+        @media screen and (max-width: 740px) {
+            width: 100px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width: 740px) {
+            display: none;
+        }
+        
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-phone {
+            font-family: "Montserrat-SemiBold";
+            font-size: 25px;
+            line-height: 30px;
+            color: $font-color;
+            text-align: right;
+            text-decoration: none;
+        }
+
+        &-phone-desc {
+            font-family: "OpenSans-Regular";
+            font-size: 14px;
+            line-height: 140%;
+            text-align: right;
+            color: $font-color;
+        }
+
+        &-message {
+            display: flex;
+            gap: 5px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.nav-sidebar {
+    width: 370px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    &__list {
+    }
+
+    &__item {
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:hover {
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-family: "OpenSans-Bold";
+        font-size: 16px;
+        line-height: 22px;
+        color: #7d7d7d;
+        padding: 15px;
+        &:hover {
+            color: $accent-color;
+        }
+
+        &_active {
+            color: $accent-color;
+        }
+    }
+}
+

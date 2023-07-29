@@ -1,0 +1,226 @@
+.application-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+
+  &__title {
+    text-align: center;
+    color: $font-color;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding-top: 60px;
+
+    @media (max-width: 1060px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-top: 20px;
+    }
+  }
+
+  &__name,
+  &__tel,
+  &__btn {
+    width: 31%;
+    min-width: 300px;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 740px) {
+      width: 100%;
+      min-width: none;
+    }
+  }
+
+  &__btn--disabled {
+    background-color: $font-color;
+  }
+
+  &__name,
+  &__tel {
+    padding-left: 20px;
+    font-family: 'OpenSans-Regular';
+    font-size: 16px;
+    color: $font-color;
+
+    &::-webkit-input-placeholder {
+      font-family: 'OpenSans-Regular';
+      font-size: 16px;
+    }
+
+    &::-moz-placeholder {
+      font-family: 'OpenSans-Regular';
+      font-size: 16px;
+    }
+
+    &:-ms-input-placeholder {
+      font-family: 'OpenSans-Regular';
+      font-size: 16px;
+    }
+
+    &::-ms-input-placeholder {
+      font-family: 'OpenSans-Regular';
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-family: 'OpenSans-Regular';
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: none !important;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__badge {
+    font-family: 'OpenSans-Bold';
+    font-size: 14px;
+    color: $accent-color;
+  }
+
+  &__disc {
+    display: block;
+    gap: 10px;
+    width: 95%;
+    font-size: 14px;
+    padding-top: 10px;
+    color: #7d7d7d;
+
+    @media (max-width: 1060px) {
+      max-width: 600px;
+    }
+  }
+
+  &__text {
+    padding-left: 25px;
+    font-size: 14px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $main-color;
+    text-decoration: underline;
+  }
+}
+
+.modal-app {
+  z-index: 4;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(22, 22, 22, 0.5);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    height: 520px;
+    background-color: $bac-color;
+    padding: 60px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 600px) {
+      padding: 20px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-family: 'Montserrat-SemiBold';
+    font-size: 32px;
+    text-align: center;
+    color: $main-color;
+  }
+
+  & .application-form__name,
+  .application-form__tel,
+  .application-form__btn {
+    width: 100%;
+    height: 54px;
+    border-radius: 10px;
+    border: none;
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  display: inline;
+  z-index: -1;
+  opacity: 0;
+}
+
+.application-form__label {
+  position: relative;
+  display: block;
+}
+
+.custom-checkbox+.application-form__label {
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.custom-checkbox+.application-form__label::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 5px;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:not(:disabled):not(:checked)+.application-form__label:hover::before {
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:not(:disabled):active+.application-form__label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:focus+.application-form__label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-checkbox:focus:not(:checked)+.application-form__label::before {
+  border-color: #80bdff;
+}
+
+.custom-checkbox:checked+.application-form__label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox:disabled+.application-form__label::before {
+  background-color: #e9ecef;
+}

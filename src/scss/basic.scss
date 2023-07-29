@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Montserrat-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+
+    @media screen and (max-width: 740px) {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-family: "Montserrat-SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+
+    @media screen and (max-width: 740px) {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-family: "Montserrat-SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media screen and (max-width: 740px) {
+        font-size: 20px;
+    }
+}
+
+h4 {
+    font-family: "OpenSans-Bold";
+    font-size: 16px;
+    line-height: 140%;
+    color: $font-color;
+}
+
+html {
+    font-family: "OpenSans-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    color: $text-color;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#root {
+    width: 100%;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.section-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.width-adaptiv {
+    width: $desktop-width;
+
+    @media (max-width: 1250px) {
+        width: $half-desktop-width;
+    }
+
+    @media (max-width: 1060px) {
+        width: $tablet-width;
+    }
+
+    @media (max-width: 920px) {
+        width: $mobile-width;
+    }
+
+    @media (max-width: 780px) {
+        width: 710px;
+    }
+
+    @media (max-width: 740px) {
+        width: 90%;
+    }
+}
+
+.section__bc-color {
+    background: $bac-color;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+    background-color: $bac-color;
+}

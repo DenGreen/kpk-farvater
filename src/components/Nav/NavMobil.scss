@@ -1,0 +1,193 @@
+@media screen and (max-width: 740px) {
+    .mobil .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        box-sizing: border-box;
+        background-color: #fff;
+        overflow-y: auto;
+        min-height: 100%;
+        padding-top: 65px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        transform: translate(-150%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1;
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &__info {
+            width: 90%;
+            padding-top: 15px;
+            padding-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 15px;
+
+            &-phone {
+                font-family: "Montserrat-SemiBold";
+                font-size: 20px;
+                color: $font-color
+            }
+        }
+
+        &__item {
+            display: block;
+            overflow: hidden;
+            width: 90%;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            max-height: 50px;
+            min-height: 50px;
+            transition: max-height 0.4s, background-color 0.4s;
+
+            &_active {
+                max-height: 800px;
+                background-color: #fff;
+                transition: max-height 1.1s, background-color 0.4s;
+
+                & .burger__line-1 {
+                    transform: translateY(-2px);
+                    transition: transform 0.25s;
+                }
+
+                & .burger__line-3 {
+                    transform: translateY(2px);
+                    transition: transform 0.25s;
+                }
+            }
+        }
+
+        &__link {
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            font-family: "OpenSans-Bold";
+            font-size: 16px;
+            color: #7d7d7d;
+
+            &_sum-menu {
+                font-family: "OpenSans-Regular";
+            }
+
+            &_active {
+                color: $accent-color;
+
+                .burger__line-2,
+                .burger__line-1,
+                .burger__line-3 {
+                    fill: $accent-color;
+                }
+            }
+        }
+    }
+
+    .sub-menu_active {
+        padding: 0 10px 10px 10px;
+        background-color: #fff;
+        visibility: visible;
+        border-radius: 10px;
+    }
+
+    .burger__main {
+        height: 20px;
+        margin-left: 15px;
+        margin-top: 2px;
+    }
+
+    .burger__line-1 {
+        transform: translateY(0);
+        transition: transform 0.25s;
+    }
+
+    .burger__line-3 {
+        transform: translateY(0);
+        transition: transform 0.25s;
+    }
+
+    .checkbox {
+        position: absolute;
+        display: block;
+        height: 44px;
+        width: 44px;
+        top: 15px;
+        right: 15px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 45px;
+        width: 50px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+        padding: 10px;
+        background-color: #ea7f1e;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .line {
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background: #fff;
+    }
+
+    .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .line4 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .checkbox:checked ~ .nav {
+        transform: translateX(0);
+    }
+
+    .checkbox:checked ~ .hamburger {
+        background-color: #e6e6ec;
+    }
+
+    .checkbox:checked ~ .hamburger .line1 {
+        transform: scaleY(0);
+    }
+
+    .checkbox:checked ~ .hamburger .line2 {
+        background-color: $main-color;
+        margin-left: 4px;
+        transform: rotate(45deg) translateY(6px);
+    }
+
+    .checkbox:checked ~ .hamburger .line3 {
+        background-color: $main-color;
+        margin-left: 4px;
+        transform: rotate(-45deg) translateY(-6px);
+    }
+
+    .checkbox:checked ~ .hamburger .line4 {
+        transform: scaleY(0);
+    }
+}

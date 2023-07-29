@@ -1,0 +1,63 @@
+.doc-consideration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 120px;
+
+    &__title {
+        display: block;
+        text-align: center;
+        color: $font-color;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        padding-top: 60px;
+
+        @media (max-width: 920px) {
+            padding-left: 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 60px;
+        font-size: 16px;
+        color: $font-color;
+        min-height: 30px;
+
+        &::after {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: attr(data-item);
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            font-family: "OpenSans-Bold";
+            font-size: 16px;
+            color: #fff;
+            background-color: $main-color;
+        }
+    }
+
+    &__desc {
+        padding-top: 35px;
+        color: $soft-font-color;
+        @media (max-width: 920px) {
+            padding-left: 10px;
+        }
+
+        @media screen and (max-width: 740px) {
+           font-size: 13px;
+           line-height: 22px;
+        }
+    }
+}

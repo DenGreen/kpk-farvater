@@ -1,0 +1,37 @@
+.regulatory {
+    & .conditions__titel {
+        display: none;
+    }
+
+    & .conditions {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    & .conditions__list {
+        margin-top: 0;
+    }
+
+    & .conditions__item {
+        & a {
+            font-family: "OpenSans-Regular";
+            color: $links-color;
+        }
+    }
+
+    & .conditions__option {
+        width: 54%;
+
+        @media screen and (max-width: 740px) {
+            width: 100%;
+        }
+    }
+
+    & .conditions__text {
+        width: 45%;
+
+        @media screen and (max-width: 740px) {
+            width: 100%;
+        }
+    }
+}

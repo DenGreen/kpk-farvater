@@ -1,0 +1,115 @@
+.question-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+
+    &__title {
+        color: $font-color;
+    }
+
+    &__list {
+        width: 100%;
+        padding-top: 60px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        padding-left: 30px;
+        background: #ffffff;
+        box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+
+        @media screen and (max-width: 740px) {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(65, 66, 109, 0.13), rgba(65, 66, 109, 0.13)), #ffffff;
+            box-shadow: 0px 1px 35px rgba(0, 0, 0, 0.05);
+
+            @media (hover: none) {
+                background: #ffffff;
+            }
+        }
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            font-family: "OpenSans-Bold";
+            font-size: 16px;
+            color: $font-color;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            cursor: pointer;
+
+            @media screen and (max-width: 740px) {
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+        }
+
+        &-caption {
+            max-width: 78%;
+            line-height: 140%;
+        }
+
+        &-text {
+            max-height: 0;
+            overflow: hidden;
+            padding-bottom: 0;
+            padding-right: 20px;
+            transition: max-height 0.25s ease, padding-bottom 0.25s ease;
+            font-size: 16px;
+            color: $font-color;
+            line-height: 140%;
+
+            &_active {
+                max-height: 250px;
+                padding-bottom: 30px;
+                transition: max-height 0.9s linear, padding-bottom 0.4s linear;
+
+                @media screen and (max-width: 740px) {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+        &-svg {
+            position: relative;
+            width: 36px;
+            height: 36px;
+            margin-right: 30px;
+            border-radius: 50%;
+            background: rgba(65, 66, 109, 0.1);
+
+            @media screen and (max-width: 740px) {
+                margin-right: 20px;
+            }
+
+            &-vert {
+                opacity: 1;
+                position: absolute;
+                top: 9px;
+                right: 17px;
+                transition: opacity 0.25s ease-in;
+
+                &_active {
+                    opacity: 0;
+                    transition: opacity 0.25s ease-in;
+                }
+            }
+
+            &-gor {
+                position: absolute;
+                top: 16px;
+                right: 9px;
+            }
+        }
+    }
+}

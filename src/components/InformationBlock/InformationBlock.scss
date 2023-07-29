@@ -1,0 +1,120 @@
+.information-block {
+    margin-top: 120px;
+
+    &__text {
+        font-size: 16px;
+        line-height: 140%;
+        color: $font-color;
+    }
+
+    &__btn {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        font-family: "OpenSans-Bold";
+        font-size: 16px;
+        line-height: 22px;
+        color: $links-color;
+    }
+
+    &__desc {
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+        margin-top: 10px;
+        max-height: 0px;
+        min-height: 0px;
+        transition: max-height 0.4s;
+
+        & li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 22px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $main-color;
+            }
+        }
+    }
+
+    &__desc_active {
+        max-height: 300px;
+        transition: max-height 1.2s;
+
+        @media screen and (max-width: 600px) {
+            max-height: 400px;
+        }
+    }
+}
+
+.arrow-4 {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height:20px;
+}
+.arrow-4-left {
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    left: 11px;
+    width: 20px;
+    height: 3px;
+    display: block;
+    transform: rotate(35deg);
+    float: right;
+    border-radius: 2px;
+}
+.arrow-4-left:after {
+    content: "";
+    background-color: $links-color;
+    width: 20px;
+    height: 3px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all 0.5s cubic-bezier(0.4, 1.7, 0.35, 0.8);
+    z-index: -1;
+}
+ 
+.arrow-4-right {
+    position: absolute;
+    background-color: transparent;
+    top: 10px;
+    left: 26px;
+    width: 20px;
+    height: 3px;
+    display: block;
+    transform: rotate(-35deg);
+    float: right;
+    border-radius: 2px;
+}
+.arrow-4-right:after {
+    content: "";
+    background-color: $links-color;
+    width: 20px;
+    height: 3px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all 0.5s cubic-bezier(0.4, 1.7, 0.35, 0.8);
+    z-index: -1;
+}
+.open .arrow-4-left:after {
+    transform-origin: center center;
+    transform: rotate(-70deg);
+}
+.open .arrow-4-right:after {
+    transform-origin: center center;
+    transform: rotate(70deg);
+}

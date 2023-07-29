@@ -1,0 +1,29 @@
+.laws {
+    & .conditions__titel {
+        display: none;
+    }
+    & .conditions {
+        padding-top: 0;
+        width: 100%;
+    }
+
+    & .conditions__list {
+        margin-top: 0;
+    }
+
+    & .conditions__option {
+        width: 60%;
+
+        @media screen and (max-width: 740px) {
+            width: 100%;
+        }
+    }
+
+    & .conditions__text {
+        width: 36%;
+
+        @media screen and (max-width: 740px) {
+            width: 100%;
+        }
+    }
+}

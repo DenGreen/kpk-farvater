@@ -1,0 +1,13 @@
+.services-page {
+    & .breadcrumbs {
+        margin-top: 20px;
+
+        & path {
+            stroke: $soft-font-color;
+        }
+    }
+
+    & .breadcrumbs__link span {
+        color: $soft-font-color;
+    }
+}

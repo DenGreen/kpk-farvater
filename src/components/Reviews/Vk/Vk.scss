@@ -1,0 +1,137 @@
+.revievs-vk {
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+
+    @media (max-width: 920px){
+        height: 430px;
+        width: 100%;
+        min-width:auto;
+        padding: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -4px;
+        right: 0;
+        height: 70px;
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    &__logo {
+        padding-left: 0px;
+        max-width: 250px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-top: 30px;
+        padding-left: 10px;
+        overflow: hidden;
+        overflow-y: scroll;
+        height: 90%;
+        direction: rtl;
+        scrollbar-width: thin;
+        scrollbar-color: $links-color #f5f5f5;
+        background-color: #fff;
+        border-radius: 10px;
+
+        @media screen and (max-width: 920px) {
+            padding-right: 10px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f5f5f5;
+            border-radius: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #4d76a1;
+            border-radius: 2px;
+
+            &:hover {
+                background-color: #4d76a1;
+            }
+        }
+
+        & * {
+            direction: ltr;
+        }
+    }
+
+    &__item {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-areas:
+            "img names"
+            "img date";
+        justify-content: start;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__link-img {
+        grid-area: img;
+    }
+
+    &__img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        text-align: left;
+        grid-area: names;
+        font-size: 16px;
+        line-height: 140%;
+        color: #2f4c6c;
+    }
+
+    &__date {
+        text-align: left;
+        grid-area: date;
+        font-size: 16px;
+        line-height: 140%;
+        color: $soft-font-color;
+    }
+
+    &__main-text {
+        text-align: left;
+        padding-top: 7px;
+        color: $font-color;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    &__main-img-box {
+        text-align: left;
+        padding-top: 7px;
+    }
+
+    &__main-img {
+        width: 90px;
+        border-radius: 5px;
+    }
+}
